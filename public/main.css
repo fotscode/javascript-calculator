@@ -1,0 +1,159 @@
+*, *::before,*::after{
+  box-sizing:border-box;
+  font-family:Bebas Neue;
+}
+
+html,body{
+  height:100%;
+}
+
+body{
+  background:linear-gradient(180deg,#c3feff,#ffc5eb);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:0;
+  padding:0;
+}
+
+button{
+  font-size:2rem;
+  outline:none;
+  border:1px solid #202020;
+}
+
+button:hover{
+  color:white;
+	text-shadow:
+    2px 2px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  border:2px solid black;
+
+}
+
+button,#history{ /* no select*/
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+#calculator-container{
+  display:grid;
+  grid-template-columns:repeat(4,80px);
+  grid-template-rows:minmax(100px, auto) repeat(5,80px);
+  grid-template-areas:
+    "display display display display"
+    "clear clear divide multiply"
+    "seven eight nine substract"
+    "four five six add"
+    "one two three equals"
+    "zero zero decimal equals";
+  justify-content:center;
+  align-content:center;
+  minheight:100vh;
+}
+
+#nine{
+  grid-area:nine;
+}
+
+#eight{
+  grid-area:eight;
+}
+#seven{
+  grid-area:seven;
+}
+#six{
+  grid-area:six;
+}
+#five{
+  grid-area:five;
+}
+#four{
+  grid-area:four;
+}
+#nine{
+  grid-area:nine;
+}
+#three{
+  grid-area:three;
+}
+
+#two{
+  grid-area:two;
+}
+
+#one{
+  grid-area:one;
+}
+
+#zero{
+  grid-area:zero;
+}
+
+#clear{
+  grid-area:clear;
+  background-color:rgba(255,0,0,0.6);
+}
+
+#add{
+  grid-area:add;
+}
+
+#subtract{
+  grid-area:substract;
+}
+
+#divide{
+  grid-area:divide;
+}
+
+#multiply{
+  grid-area:multiply;
+}
+
+#decimal{
+  grid-area:decimal;
+}
+
+#equals{
+  grid-area:equals;
+  background-color:rgba(195,254,255,0.7);
+}
+
+#display-container{
+  grid-area:display;
+  background-color:rgba(0,0,0,.75);
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-evenly;
+  align-items:flex-end;
+  padding:15px;
+  word-break:break-all;
+  word-wrap: break-word;
+
+}
+
+#display-container > #display{
+  font-size:2.5rem;
+}
+
+p{
+  margin:0;
+}
+
+.operator{
+  background-color:rgba(247, 224, 24,0.6);
+}
+
+.number,#decimal{
+  background-color:rgb(253, 255, 148);
+}
