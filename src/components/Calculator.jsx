@@ -122,6 +122,7 @@ class Calculator extends React.Component{
   }
 
   handleEquals(){
+		if (this.state.history.includes("=")) return;
     let newHistory=this.state.history;
 
     if (operatorsSymbols.indexOf(this.state.current)!==-1){
