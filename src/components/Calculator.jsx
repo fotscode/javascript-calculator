@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const numbersIDS=["zero","one","two","three","four","five","six","seven","eight","nine"];
 const operatorsSymbols=["+","-","/","*"];
@@ -133,7 +133,7 @@ class Calculator extends React.Component{
 
     let result = eval(newHistory);
 
-    if (result===Infinity || (!result&&result!=0)){
+    if (result===Infinity || (!result&&result!==0)){
       result="ILLEGAL EXPRESSION";
     }
 
